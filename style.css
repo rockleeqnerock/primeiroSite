@@ -1,0 +1,30 @@
+*{
+    font-family: 'Times New Roman';
+text-align: left;
+background-color: rgb(163, 212, 212);
+
+
+}
+h1{
+   font-size: 250%;
+   text-align: center;
+   padding: 5%;
+   color: rgb(0, 39, 39);
+   text-decoration: underline;
+}
+h2{
+    font-size: xx-large;
+}
+h3{
+    color: rgb(89, 89, 89);
+}
+img{
+    border: solid 2px rgba(36, 63, 65, 0.662);
+}
+nav{
+    text-align: center;
+
+}
+a{
+    color: rgb(3, 74, 74);
+}
