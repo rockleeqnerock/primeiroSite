@@ -1,30 +1,74 @@
-*{
+* {
     font-family: 'Times New Roman';
-text-align: left;
-background-color: rgb(163, 212, 212);
+}
 
+.nav a {
+    text-align: right;
+    font-size: small;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: gray;
+    text-decoration: none;
+    color: black;
+    text-align: end;
+}
 
-}
-h1{
-   font-size: 250%;
-   text-align: center;
-   padding: 5%;
-   color: rgb(0, 39, 39);
-   text-decoration: underline;
-}
-h2{
-    font-size: xx-large;
-}
-h3{
-    color: rgb(89, 89, 89);
-}
-img{
-    border: solid 2px rgba(36, 63, 65, 0.662);
-}
-nav{
+.nav2 a {
+    color: black;
+    font-size: small;
+    margin: 40px;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    text-decoration: none;
     text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 300%;
+}
+
+.article h2 {
+    font-size: smaller;
+}
+
+p {
+    font-size: small;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
-a{
-    color: rgb(3, 74, 74);
+
+.noticia2 {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    background-color: rgb(154, 152, 152);
+    border-radius: 25px;
+}
+
+.not {
+    width: 1800px;
+    height: 900px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    background-color: rgb(154, 152, 152);
+    border-radius: 25px;
+    font-size: 200%;
+   
+}
+.not p{
+    font-size: 110%;
+}
+
+.not h3{
+    color: rgb(47, 47, 47);
 }
