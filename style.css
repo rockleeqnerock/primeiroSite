@@ -1,7 +1,7 @@
 * {
     font-family: 'Times New Roman';
 }
-
+/* colocando como fonte padrão pro site a "Times new Roman"*/
 .nav a {
     text-align: right;
     font-size: small;
@@ -10,9 +10,11 @@
     background-color: gray;
     text-decoration: none;
     color: black;
-    text-align: end;
-}
 
+}
+/* alinhando o texto, ajustando tamanho da fonte, adicionando uma margem, arredondando a borda,
+adicionando uma cor pro fundo, retirando a decoração do texto e mudando a cor da fonte na aba de 
+navegação*/
 .nav2 a {
     color: black;
     font-size: small;
@@ -22,19 +24,18 @@
     text-decoration: none;
     text-align: center;
 }
-
+/* mudando a cor do texto, ajustando o tamanho da fonte, adicionando uma margem, arredondando a borda
+mudando a cor de fundo, retirando a decoração do texto e alinhando o texto no centro nos botões de 
+mostrar mais*/
 h1 {
     text-align: center;
     font-size: 300%;
 }
-
+/* alinhando o texto no centro e ajustando o tamanho da fonte do título do site*/
 .article h2 {
     font-size: smaller;
 }
-
-p {
-    font-size: small;
-}
+/*ajustando o tamanho da fonte  dos títulos das notícias*/
 
 .container {
     display: flex;
@@ -43,7 +44,7 @@ p {
     flex-wrap: wrap;
 
 }
-
+/* adicionando o container e ajustando o local, alinhamento e distância entre eles*/
 .noticia2 {
     width: 400px;
     height: 400px;
@@ -53,7 +54,8 @@ p {
     background-color: rgb(154, 152, 152);
     border-radius: 25px;
 }
-
+/* modificando tamanho, alinhamento, distância do texto com a borda interna, cor e arredondando 
+a borda dos "blocos" de cada notícia */
 .not {
     width: 1800px;
     height: 900px;
@@ -65,10 +67,42 @@ p {
     font-size: 200%;
    
 }
+/* ajustando tamanho, alinhamento, margem, distância do texto para borda interna, cor de fundo
+e arredondando a borda de todas as páginas de notícia completa*/
 .not p{
     font-size: 110%;
 }
-
+/* ajustando o tamanho da fonte do parágrafo de todas as notícias*/
 .not h3{
     color: rgb(47, 47, 47);
 }
+/* adicionando uma cor diferente para o subtítulo de todas as notícias*/
+
+
+.navsobre a{
+    text-decoration: none;
+    color: black; 
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin: 30px;
+    padding: 8px;
+    background-color: rgb(227, 232, 233);
+    border-radius: 25px;
+}
+/*tirando decoração do texto, mudando a cor do texto, mudando tamanho de largura e altura do "botão"
+alinahndo texto no centro, adicionando uma margem externa, ajustando distância do texto 
+com a borda interna, mudando cor de fundo, e arredondando a borda do botão que leva para página de sobre e contato*/
+.sobre{
+    width: 1800px;
+    height: 900px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    background-color: rgb(154, 152, 152);
+    border-radius: 25px;
+    font-size: 200%; 
+}
+/* editando tamanho do fundo, alinhando texto no centro, adicionando margem externa, ajustando distância do texto 
+com a borda interna, mudando cor do fundo, arredondando as pontas e ajustando tamanho da fonte, da página
+de sobre e contato */
