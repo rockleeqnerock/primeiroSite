@@ -106,3 +106,17 @@ com a borda interna, mudando cor de fundo, e arredondando a borda do botão que 
 /* editando tamanho do fundo, alinhando texto no centro, adicionando margem externa, ajustando distância do texto 
 com a borda interna, mudando cor do fundo, arredondando as pontas e ajustando tamanho da fonte, da página
 de sobre e contato */
+
+.hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1.5s;
+  
+  }
+ /*chamando a classe hidden e deixando ela "invisível"*/
+  .show{
+    opacity: 1;
+    transform: translateX(0); 
+    transition: all 1.5s;
+  }
+  /*"criando" a classe show que irá substituir o hidden para se tornar visível*/
