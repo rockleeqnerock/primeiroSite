@@ -1,6 +1,7 @@
 * {
     font-family: 'Times New Roman';
 }
+
 /* colocando como fonte padrão pro site a "Times new Roman"*/
 .nav a {
     text-align: right;
@@ -12,6 +13,7 @@
     color: black;
 
 }
+
 /* alinhando o texto, ajustando tamanho da fonte, adicionando uma margem, arredondando a borda,
 adicionando uma cor pro fundo, retirando a decoração do texto e mudando a cor da fonte na aba de 
 navegação*/
@@ -24,6 +26,7 @@ navegação*/
     text-decoration: none;
     text-align: center;
 }
+
 /* mudando a cor do texto, ajustando o tamanho da fonte, adicionando uma margem, arredondando a borda
 mudando a cor de fundo, retirando a decoração do texto e alinhando o texto no centro nos botões de 
 mostrar mais*/
@@ -31,10 +34,12 @@ h1 {
     text-align: center;
     font-size: 300%;
 }
+
 /* alinhando o texto no centro e ajustando o tamanho da fonte do título do site*/
 .article h2 {
     font-size: smaller;
 }
+
 /*ajustando o tamanho da fonte  dos títulos das notícias*/
 
 .container {
@@ -44,6 +49,7 @@ h1 {
     flex-wrap: wrap;
 
 }
+
 /* adicionando o container e ajustando o local, alinhamento e distância entre eles*/
 .noticia2 {
     width: 400px;
@@ -54,6 +60,7 @@ h1 {
     background-color: rgb(154, 152, 152);
     border-radius: 25px;
 }
+
 /* modificando tamanho, alinhamento, distância do texto com a borda interna, cor e arredondando 
 a borda dos "blocos" de cada notícia */
 .not {
@@ -65,23 +72,26 @@ a borda dos "blocos" de cada notícia */
     background-color: rgb(154, 152, 152);
     border-radius: 25px;
     font-size: 200%;
-   
+
 }
+
 /* ajustando tamanho, alinhamento, margem, distância do texto para borda interna, cor de fundo
 e arredondando a borda de todas as páginas de notícia completa*/
-.not p{
+.not p {
     font-size: 110%;
 }
+
 /* ajustando o tamanho da fonte do parágrafo de todas as notícias*/
-.not h3{
+.not h3 {
     color: rgb(47, 47, 47);
 }
+
 /* adicionando uma cor diferente para o subtítulo de todas as notícias*/
 
 
-.navsobre a{
+.navsobre a {
     text-decoration: none;
-    color: black; 
+    color: black;
     width: 100px;
     height: 50px;
     text-align: center;
@@ -90,10 +100,11 @@ e arredondando a borda de todas as páginas de notícia completa*/
     background-color: rgb(227, 232, 233);
     border-radius: 25px;
 }
+
 /*tirando decoração do texto, mudando a cor do texto, mudando tamanho de largura e altura do "botão"
 alinahndo texto no centro, adicionando uma margem externa, ajustando distância do texto 
 com a borda interna, mudando cor de fundo, e arredondando a borda do botão que leva para página de sobre e contato*/
-.sobre{
+.sobre {
     width: 1800px;
     height: 900px;
     text-align: center;
@@ -101,22 +112,304 @@ com a borda interna, mudando cor de fundo, e arredondando a borda do botão que 
     padding: 10px;
     background-color: rgb(154, 152, 152);
     border-radius: 25px;
-    font-size: 200%; 
+    font-size: 200%;
 }
+
 /* editando tamanho do fundo, alinhando texto no centro, adicionando margem externa, ajustando distância do texto 
 com a borda interna, mudando cor do fundo, arredondando as pontas e ajustando tamanho da fonte, da página
 de sobre e contato */
 
-.hidden{
+.hidden {
     opacity: 0;
     transform: translateX(-100%);
     transition: all 1.5s;
-  
-  }
- /*chamando a classe hidden e deixando ela "invisível"*/
-  .show{
+
+}
+
+/*chamando a classe hidden e deixando ela "invisível"*/
+.show {
     opacity: 1;
-    transform: translateX(0); 
+    transform: translateX(0);
     transition: all 1.5s;
-  }
-  /*"criando" a classe show que irá substituir o hidden para se tornar visível*/
+}
+
+/*"criando" a classe show que irá substituir o hidden para se tornar visível*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 768px) {
+
+    * {
+        font-family: 'Times New Roman';
+    }
+
+
+    .nav a {
+        text-align: center;
+        font-size: medium;
+        margin: 10px;
+        border-radius: 6px;
+        background-color: rgb(104, 98, 98);
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .nav2 a {
+        color: black;
+        font-size: small;
+        margin: 40px;
+        border-radius: 2px;
+        background-color: rgb(104, 98, 98);
+        text-decoration: none;
+        text-align: center;
+    }
+
+
+    h1 {
+        text-align: center;
+        font-size: 250%;
+    }
+
+
+    .article h2 {
+        font-size: smaller;
+    }
+
+
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+
+    .noticia2 {
+        height: 450px;
+        text-align: center;
+        margin: 30px;
+        padding: 10px;
+        background-color: rgb(154, 152, 152);
+        border-radius: 25px;
+    }
+
+
+    .not {
+        width: 540px;
+        height: 800px;
+        text-align: center;
+        margin: 20px;
+        padding: 7px;
+        background-color: rgb(154, 152, 152);
+        border-radius: 25px;
+        font-size: 90%;
+
+    }
+.not img {
+    width:300px;
+    height:300px;
+}
+
+    .not p {
+        font-size: 110%;
+    }
+
+
+    .not h3 {
+        color: rgb(47, 47, 47);
+    }
+
+
+
+
+    .navsobre a {
+        text-decoration: none;
+        color: black;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        margin: 30px;
+        padding: 8px;
+        background-color: rgb(104, 98, 98);
+        border-radius: 25px;
+    }
+
+    .sobre {
+        width: 650px;
+        height: 700px;
+        text-align: center;
+        margin: 20px;
+        padding: 10px;
+        background-color: rgb(154, 152, 152);
+        border-radius: 25px;
+        font-size: 180%;
+    }
+
+
+    .hidden {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1.5s;
+
+    }
+
+
+    .show {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 1.5s;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 568px) {
+
+    * {
+        font-family: 'Times New Roman';
+    }
+
+
+    .nav a {
+        text-align: center;
+        font-size: medium;
+        margin: 10px;
+        border-radius: 6px;
+        background-color: rgb(85, 85, 85);
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .nav2 a {
+        color: black;
+        font-size: small;
+        margin: 40px;
+        border-radius: 5px;
+        background-color: rgb(85, 85, 85);
+        text-decoration: none;
+        text-align: center;
+    }
+
+
+    h1 {
+        text-align: center;
+        font-size: 100%;
+    }
+
+
+    .article h2 {
+        font-size: x-small;
+    }
+
+
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+
+    .noticia2 {
+        width: 400px;
+        height: 420px;
+        text-align: center;
+        margin: 30px;
+        padding: 10px;
+        background-color: rgb(154, 152, 152);
+        border-radius: 25px;
+    }
+
+
+    .not {
+        width: 450px;
+        height: 900px;
+        text-align: center;
+        margin: 20px;
+        padding: 7px;
+        background-color: rgb(154, 152, 152);
+        border-radius: 25px;
+        font-size: 90%;
+
+    }
+.not img{
+    width: 400px;
+    height: 300px;
+}
+
+    .not p {
+        font-size: 110%;
+    }
+
+
+    .not h3 {
+        color: rgb(47, 47, 47);
+    }
+
+
+
+
+    .navsobre a {
+        text-decoration: none;
+        color: black;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        margin: 30px;
+        padding: 8px;
+        background-color: rgb(104, 98, 98);
+        border-radius: 25px;
+    }
+
+    .sobre {
+        width: 450px;
+        height: 500px;
+        text-align: center;
+        margin: 20px;
+        padding: 10px;
+        background-color: rgb(154, 152, 152);
+        border-radius: 25px;
+        font-size: 180%;
+    }
+
+
+    .hidden {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1.5s;
+
+    }
+
+
+    .show {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 1.5s;
+    }
+
+}
