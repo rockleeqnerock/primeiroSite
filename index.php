@@ -50,13 +50,30 @@ $news4-> setImagem("https://portalhortolandia.com.br/wp-content/uploads/2024/02/
 
 <body>
     <nav class="nav">
-        <a href="index.html">HOME</a>
+        <a href="index.php">HOME</a>
         <a href="#noticia">NOTÍCIAS</a>
         <a href="#sobre">SOBRE E CONTATO</a>
-        <a href="formulario.php">FORMULÁRIO</a>
-
-
+        <a href="?page=novo">NOVA NOTÍCIA</a>
+        <a href="#">LISTA NOTICIAS</a>
     </nav>
+
+<?php 
+include("config.php");
+switch(@$_REQUEST["page"]){
+case "novo":
+    include("nova-noticia.php");
+    break;
+ case "listar":
+    include("listar-noticia.php");
+    break;
+ case "salvar":
+    include("salvar-noticia.php");
+    break;
+ default:
+?>
+
+<!--chamando tudo que precisa pra conseguir adicionar a notícia ao banco de dados-->
+
     <!-- fazendo a aba de navegação que leva as notícias, sobre e contato-->
     <h1>NOTÍCIA NOTÍCIA NOTÍCIA</h1>
     <!-- criando um título para o site-->
@@ -131,7 +148,7 @@ $news4-> setImagem("https://portalhortolandia.com.br/wp-content/uploads/2024/02/
                 <article>
                     <h2><?php echo $news4->getTitulo();?></h2>
 
-                    <h3><?php echo $news4->getTitulo();?></h3>
+                    <h3><?php echo $news4->getSubtitulo();?></h3>
 
                     <img src="<?php echo $news4->getImagem();?>"
                         alt="doginho acorrentado" width="300px" height="150px">
@@ -153,7 +170,7 @@ $news4-> setImagem("https://portalhortolandia.com.br/wp-content/uploads/2024/02/
         <!-- criando um botão que leva a seção, em outra página, de sobre e contato-->
 
     </section>
-
+<?php } ?>
     <script src="scripts.js"></script>
 </body>
 

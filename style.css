@@ -438,11 +438,12 @@ de sobre e contato */
    height: 4%;
     margin: 15px;
     background-color:rgb(191, 190, 190); 
-    
+  font-size: large;  
 }
 .input2{
     border-radius: 6px;
     width: 600px;
     margin: 20px;
     background-color:rgb(191, 190, 190);  
+    font-size: medium; 
 }
