@@ -9,4 +9,4 @@ $conn = new mysqli(HOST, USER, PASS, BASE);
 
 ?>
 
-<!--defindo o 'blog' como nosso banco de dados
+<!--defindo o 'blog' como nosso banco de dados -->

@@ -25,13 +25,13 @@ $news3 = new noticias();
 $news3->setTitulo("Projeto que resgata e abriga animais de rua realiza campanha para construir abrigo");
 $news3->setSubtitulo("Instituição já tem o terreno e agora conta com ajuda dos simpatizantes da causa animal para
 arrecadar os itens necessários.");
-$news3-> setImagem("https://s2-g1.glbimg.com/Yabq40188FaSqiprrlWoOClpoj0=/0x0:1600x1507/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/m/V/cS8UA6TF6buky4b1H04Q/whatsapp-image-2024-02-19-at-16.06.48.jpeg");
+$news3->setImagem("https://s2-g1.glbimg.com/Yabq40188FaSqiprrlWoOClpoj0=/0x0:1600x1507/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/m/V/cS8UA6TF6buky4b1H04Q/whatsapp-image-2024-02-19-at-16.06.48.jpeg");
 
 $news4 = new noticias();
-$news4 ->setTitulo(" Fim do acorrentamento em Hortolândia");
+$news4->setTitulo(" Fim do acorrentamento em Hortolândia");
 $news4->setSubtitulo("A luta pela proteção animal ganha mais um aliado em Hortolândia com a aprovação do Projeto de
 Lei nº 94/2023");
-$news4-> setImagem("https://portalhortolandia.com.br/wp-content/uploads/2024/02/cachorro-preso.jpg");
+$news4->setImagem("https://portalhortolandia.com.br/wp-content/uploads/2024/02/cachorro-preso.jpg");
 
 
 ?>
@@ -54,25 +54,28 @@ $news4-> setImagem("https://portalhortolandia.com.br/wp-content/uploads/2024/02/
         <a href="#noticia">NOTÍCIAS</a>
         <a href="#sobre">SOBRE E CONTATO</a>
         <a href="?page=novo">NOVA NOTÍCIA</a>
-        <a href="#">LISTA NOTICIAS</a>
+        <a href="?page=lista">LISTA NOTÍCIA</a>
     </nav>
 
-<?php 
-include("config.php");
-switch(@$_REQUEST["page"]){
-case "novo":
-    include("nova-noticia.php");
-    break;
- case "listar":
-    include("listar-noticia.php");
-    break;
- case "salvar":
-    include("salvar-noticia.php");
-    break;
- default:
-?>
+    <?php
+    include("config.php");
+    switch (@$_REQUEST['page']) {
+        case "novo":
+            include("nova-noticia.php");
+            break;
+        case "salvar":
+            include("salvar-noticia.php");
+            break;
+        case "lista":
+            include ("listar-noticia.php");
+            break;
+            case 'editar':
+                include('editar-noticia.php');
+                break;
+        default:
+    ?>
 
-<!--chamando tudo que precisa pra conseguir adicionar a notícia ao banco de dados-->
+    <!--chamando tudo que precisa pra conseguir adicionar a notícia ao banco de dados-->
 
     <!-- fazendo a aba de navegação que leva as notícias, sobre e contato-->
     <h1>NOTÍCIA NOTÍCIA NOTÍCIA</h1>
@@ -85,12 +88,13 @@ case "novo":
                 <!-- criando uma classe para o container referente a todas as notícias-->
                 <article>
                     <!-- criando uma "sub-seção" para cada notícia específica-->
-                    <h2><?php echo $news->getTitulo();?></h2>
+                    <h2><?php echo $news->getTitulo(); ?></h2>
                     <!-- criando um título para cada notícia-->
-                    <h3><?php echo $news->getSubtitulo();?>
+                    <h3><?php echo $news->getSubtitulo(); ?>
                     </h3>
                     <!-- criando um subtítulo para cada notícia-->
-                    <img src="<?php echo $news->getImagem();?>" alt="Gambá está em tratamento no CAFS de Guarapuava" width="300px" height="150px">
+                    <img src="<?php echo $news->getImagem(); ?>" alt="Gambá está em tratamento no CAFS de Guarapuava"
+                        width="300px" height="150px">
                     <!-- adicionando uma imagem referente a notícia-->
                     <nav class="nav2">
                         <a href="noticias/noticia1.html">MOSTRAR MAIS</a>
@@ -102,11 +106,11 @@ case "novo":
             <div class="noticia2">
 
                 <article>
-                    <h2><?php echo $news1->getTitulo();?></h2>
+                    <h2><?php echo $news1->getTitulo(); ?></h2>
 
-                    <h3><?php echo $news1->getSubtitulo();?>
+                    <h3><?php echo $news1->getSubtitulo(); ?>
                     </h3>
-                    <img src="<?php echo $news1->getImagem();?>"
+                    <img src="<?php echo $news1->getImagem(); ?>"
                         alt="Ação vai distribuir, por um ano, alimentação para animais resgatados e cuidados por protetores e associações da capital mineira e cidades da região metropolitana"
                         width="300px" height="150px">
                     <nav class="nav2">
@@ -118,11 +122,11 @@ case "novo":
 
             <div class="noticia2">
                 <article>
-                    <h2><?php echo $news2->getTitulo();?></h2>
+                    <h2><?php echo $news2->getTitulo(); ?></h2>
 
-                    <h3><?php echo $news2->getSubtitulo();?>
+                    <h3><?php echo $news2->getSubtitulo(); ?>
                     </h3>
-                    <img src="<?php echo $news2->getImagem();?>"
+                    <img src="<?php echo $news2->getImagem(); ?>"
                         alt="Cão farejador da recebe afago de Nelsinho Trad durante reunião na qual foram aprovados direitos de animais policiais."
                         width="300px" height="150px">
                     <nav class="nav2">
@@ -133,25 +137,25 @@ case "novo":
 
             <div class="noticia2">
                 <article>
-                    <h2><?php echo $news3->getTitulo();?></</h2>
+                    <h2><?php echo $news3->getTitulo(); ?></< /h2>
 
-                    <h3><?php echo $news3->getSubtitulo();?></h3>
-                    <img src="<?php echo $news3->getImagem();?>"
-                        alt="gatinho resgatado" width="150px" height="150px">
-                    <nav class="nav2">
-                        <a href="noticias/noticia4.html">MOSTRAR MAIS</a>
-                    </nav>
+                        <h3><?php echo $news3->getSubtitulo(); ?></h3>
+                        <img src="<?php echo $news3->getImagem(); ?>" alt="gatinho resgatado" width="150px"
+                            height="150px">
+                        <nav class="nav2">
+                            <a href="noticias/noticia4.html">MOSTRAR MAIS</a>
+                        </nav>
                 </article>
             </div>
 
             <div class="noticia2">
                 <article>
-                    <h2><?php echo $news4->getTitulo();?></h2>
+                    <h2><?php echo $news4->getTitulo(); ?></h2>
 
-                    <h3><?php echo $news4->getSubtitulo();?></h3>
+                    <h3><?php echo $news4->getSubtitulo(); ?></h3>
 
-                    <img src="<?php echo $news4->getImagem();?>"
-                        alt="doginho acorrentado" width="300px" height="150px">
+                    <img src="<?php echo $news4->getImagem(); ?>" alt="doginho acorrentado" width="300px"
+                        height="150px">
                     <nav class="nav2">
                         <a href="noticias/noticia5.html">MOSTRAR MAIS</a>
                     </nav>
@@ -170,7 +174,7 @@ case "novo":
         <!-- criando um botão que leva a seção, em outra página, de sobre e contato-->
 
     </section>
-<?php } ?>
+    <?php } ?>
     <script src="scripts.js"></script>
 </body>
 

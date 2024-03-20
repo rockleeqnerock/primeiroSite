@@ -447,3 +447,10 @@ de sobre e contato */
     background-color:rgb(191, 190, 190);  
     font-size: medium; 
 }
+
+.lista{
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 150%;   
+}
