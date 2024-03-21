@@ -7,9 +7,7 @@
 
 $sql = "SELECT * FROM noticias";
 $res = $conn->query($sql);
-
 $qtd = $res->num_rows;
-
 if ($qtd > 0) {
 
   echo "<table class='table table-hover table-striped table-bordered'>";
@@ -27,21 +25,11 @@ if ($qtd > 0) {
     echo "<td>
     <button onclick=\"location.href='?page=editar&id=" . $row->idnoticias . "'; \" class='btn btn-primary'>Editar</button>
     <button onclick=\"if(confirm('Você deseja excluir essa noticia?')){location.href='?page=salvar&acao=excluir&id=" . $row->idnoticias . "';}else{false;}\" class='btn btn-secondary'>Deletar</button>
-    
-    
     </td>";
-
 echo "</tr>";
 }
-
-
 echo "</table>";
-
-
 }
-
   echo "</table>";
-
-
 ?>
 </div>

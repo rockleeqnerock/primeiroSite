@@ -20,5 +20,5 @@ switch ($_REQUEST["acao"]) {
       break;
   }
 
- //mandando o que foi escrito em cada insert para sua aba referendo no banco de dados//
+ //mandando o que foi escrito em cada insert para sua aba referente no banco de dados//
 ?>  
