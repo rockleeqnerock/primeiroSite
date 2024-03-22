@@ -1,26 +1,26 @@
 <?php
 switch ($_REQUEST["acao"]) {
-    case 'cadastrar':
-      $titulo = $_POST["titulo"];
-      $subtitulo = $_POST["subtitulo"];
-      $noticia = $_POST["noticia"];
-      $imagem = $_POST["imagem"];
+    case 'cadastrarau':
+      $nome = $_POST["nome"];
+      $endereco = $_POST["endereco"];
+      $telefone = $_POST["telefone"];
+      $email = $_POST["email"];
 
     //interligando cada insert com uma variável//
   
-      $sql = "INSERT INTO noticias (titulo, subtitulo, noticia, imagem)
-      VALUES ('{$titulo}', '{$subtitulo}', '{$noticia}', '{$imagem}')";
+      $sql = "INSERT INTO autor (nome, endereco, telefone, email)
+      VALUES ('{$nome}', '{$endereco}', '{$telefone}', '{$email}')";
   
       $res = $conn->query($sql);
       break;
   
       case 'editar':
-        $titulo = $_POST["titulo"];
-      $subtitulo = $_POST["subtitulo"];
-      $noticia = $_POST["noticia"];
-      $imagem = $_POST["imagem"];
+        $nome = $_POST['Nome'];
+        $endereco = $_POST['Endereco'];
+        $telefone = $_POST['Telefone'];
+        $email = $_POST['Email'];
     
-        $sql = "UPDATE autor SET nome='{$titulo}', endereco='{$subtitulo}', telefone='{$noticias}', email='{$imagem}' WHERE idnoticias=" . $_REQUEST['id'];
+        $sql = "UPDATE autor SET nome='{$nome}', endereco='{$endereco}', telefone='{$telefone}', email='{$email}' WHERE idautor=" . $_REQUEST['id'];
     
         $res =  $conn->query($sql);
     
@@ -31,7 +31,7 @@ switch ($_REQUEST["acao"]) {
         break;
     
       case 'excluir':
-        $sql = "DELETE FROM noticias WHERE idnoticias=" . $_REQUEST['id'];
+        $sql = "DELETE FROM autor WHERE idautor=" . $_REQUEST['id'];
         $res = $conn->query($sql);
     
         if ($res == true) {
@@ -43,6 +43,5 @@ switch ($_REQUEST["acao"]) {
         }
         break;
     }
-
- //mandando o que foi escrito em cada insert para sua aba referente no banco de dados//
-?>  
+  
+  ?>

@@ -41,15 +41,6 @@ $res = $conn->query($sql);
 
 ?>
 
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -68,6 +59,8 @@ $res = $conn->query($sql);
         <a href="#sobre">SOBRE E CONTATO</a>
         <a href="?page=novo">NOVA NOTÍCIA</a>
         <a href="?page=lista">LISTA NOTÍCIA</a>
+        <a href="?page=autor">NOVO AUTOR</a>
+        <a href="?page=listaau">LISTA AUTOR</a>
     </nav>
 
     <?php
@@ -86,6 +79,19 @@ $res = $conn->query($sql);
             include('editar-noticia.php');
             break;
 
+
+        case 'autor':
+             include('novo-autor.php');
+            break;
+        case "salvarau":
+            include("salvar-autor.php");
+            break;
+        case "listaau":
+            include("listar-autor.php");
+             break;
+             case 'editarau':
+                include('editar-autor.php');
+                break;
         default:
     ?>
 
