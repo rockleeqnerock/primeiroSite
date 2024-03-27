@@ -1,5 +1,6 @@
 <?php
-class noticias{
+class noticias
+{
 
     private int $idnoticia;
     private string $titulo;
@@ -61,7 +62,7 @@ class noticias{
     {
         return $this->created_at;
     }
- 
+
     public function setCreated_at($created_at)
     {
         $this->created_at = $created_at;
@@ -80,6 +81,6 @@ class noticias{
 
         return $this;
     }
- 
 }
 ?>
+<!-- criando o autor e tudo que estará inserido nele-->

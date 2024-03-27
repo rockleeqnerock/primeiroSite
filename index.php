@@ -40,7 +40,7 @@ $sql = "SELECT * FROM noticias";
 $res = $conn->query($sql);
 
 ?>
-
+<!--puxando as informações do blog para serem mostradas no site logo depois-->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -63,6 +63,8 @@ $res = $conn->query($sql);
         <a href="?page=listaau">LISTA AUTOR</a>
     </nav>
 
+    <!-- criando 'botões' que levam para acada uma das abas acima citadas -->
+
     <?php
 
     switch (@$_REQUEST['page']) {
@@ -81,65 +83,81 @@ $res = $conn->query($sql);
 
 
         case 'autor':
-             include('novo-autor.php');
+            include('novo-autor.php');
             break;
         case "salvarau":
             include("salvar-autor.php");
             break;
         case "listaau":
             include("listar-autor.php");
-             break;
-             case 'editarau':
-                include('editar-autor.php');
-                break;
+            break;
+        case 'editarau':
+            include('editar-autor.php');
+            break;
         default:
     ?>
 
-            <!--chamando tudo que precisa pra conseguir adicionar a notícia ao banco de dados-->
+            <!-- direcionando cada ação para sua respctiva página apartir dos nomes na url-->
 
-            <!-- fazendo a aba de navegação que leva as notícias, sobre e contato-->
             <h1>NOTÍCIA NOTÍCIA NOTÍCIA</h1>
+
             <!-- criando um título para o site-->
+
             <div class="hidden">
                 <section id="noticia" class="container">
 
 
-                    <!-- criando uma seção "noticia" para todas as notícias e uma classe "container"-->
-                    <!-- criando uma classe para o container referente a todas as notícias-->
+                    <!-- criando uma seção "noticia" para todas as notícias e uma classe "container" 
+                    para o container referente a todas as notícias-->
 
 
                     <?php while ($row = $res->fetch_object()) { ?>
                         <div class="noticia2">
                             <article>
-                                <!-- criando uma "sub-seção" para cada notícia específica-->
+
                                 <h2><?php echo $row->titulo; ?></h2>
-                                <!-- criando um título para cada notícia-->
-                                <h3><?php echo $row->subTitulo;?></h3>
-                                <!-- criando um subtítulo para cada notícia-->
+
+                                <!-- sincronizando com as informações anteriormente carregadas do blog 
+                                (comentário da linha 43), mostrando o título-->
+
+                                <h3><?php echo $row->subTitulo; ?></h3>
+
+                                <!-- sincronizando com as informações anteriormente carregadas do blog 
+                                (comentário da linha 43), mostrando o subtítulo-->
+
                                 <img src="<?php echo $row->imagem; ?>" alt="Gambá está em tratamento no CAFS de Guarapuava" width="300px" height="150px">
-                                <!-- adicionando uma imagem referente a notícia-->
+
+                                <!-- sincronizando com as informações anteriormente carregadas do blog 
+                                (comentário da linha 43), mostrando a imagem-->
+
                                 <nav class="nav2">
                                     <a href="noticia.php/?id=<?php echo $row->idnoticias; ?>">MOSTRAR MAIS</a>
+                                    <!-- adicionando um botão "mostrar mais" que leva para notícia completa-->
                                 </nav>
                             </article>
                         </div>
                     <?php } ?>
-                    <!-- adicionando um nav para inserir um botão "mostrar mais" que leva para notícia completa-->
+
 
                 </section>
             </div>
             <section id="sobre">
-                <!-- adicionando uma aba sobre para o site-->
+
             </section>
             <section id="contato">
-                <!-- criando um aba de contato para o site-->
+
                 <nav class="navsobre">
-                    <a href="noticias/sobre.html">SOBRE E CONTATO</a>
+                    <a href="sobre.html">SOBRE E CONTATO</a>
                 </nav>
+
                 <!-- criando um botão que leva a seção, em outra página, de sobre e contato-->
 
             </section>
     <?php } ?>
+
+    <!-- fechando php da parte que direciona para abas pra que, caso nenhuma das páginas 
+    seja aberta, mostre a página principal que esta sendo criada acima-->
+
     <script src="scripts.js"></script>
 </body>
 

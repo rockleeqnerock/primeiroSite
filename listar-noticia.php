@@ -10,6 +10,8 @@ $res = $conn->query($sql);
 $qtd = $res->num_rows;
 if ($qtd > 0) {
 
+// chamando as informações sobre a aba noticias do blog//
+
   echo "<table class='table table-hover table-striped table-bordered'>";
   echo "<tr>";
   echo "<th>ID</th>";
@@ -31,5 +33,8 @@ echo "</tr>";
 echo "</table>";
 }
   echo "</table>";
+
+  // ordenando as informações para conseguirmos ustilizá-las para programar os botões de editar e excluir//
+
 ?>
 </div>
